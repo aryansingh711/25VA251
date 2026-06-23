@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum of N Numbers</title>
+</head>
+<body>
+  <h2>Sum of N Numbers</h2>
+  
+  <!-- Input field for N -->
+  <input type="number" id="num" placeholder="Enter a number" />
+  <button onclick="calculateSum()">Calculate Sum</button>
+  
+  <!-- Result will be shown here -->
+  <p id="result"></p>
+  
+  <script>
+    function calculateSum() {
+      let N = document.getElementById("num").value;
+      N = parseInt(N);
+      let sum = 0;
+
+      // Loop to calculate sum
+      for (let i = 1; i <= N; i++) {
+        sum += i;
+      }
+
+      // Display result dynamically
+      document.getElementById("result").innerText = 
+        "The sum of numbers from 1 to " + N + " is: " + sum;
+    }
+  </script>
+</body>
+</html>
